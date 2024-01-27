@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FEFEFE;
+}
+
+body header {
+  padding: 20px;
+  background-color: #FEFEFE;
+}
+
+body header .neon {
+  position: relative;
+  z-index: 1002;
+  font-size: 0.3em;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  body header .neon {
+    padding: 5px;
+    font-size: 0.2em;
+  }
+}
+
+body header .hamburger span {
+  height: 3px;
+  width: 50px;
+  margin-bottom: 8px;
+  background-color: #FFF;
+  display: block;
+  z-index: 1001;
+  position: relative;
+}
+
+body header nav {
+  background-color: #BDA066;
+  height: 100vh;
+  position: fixed;
+  width: 235px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding-top: 70px;
+  font-size: 2em;
+}
+
+body header nav ul li a {
+  color: #FFF;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+  margin: 10px;
+  border-bottom: 1px solid #FEFEFE;
+}
+
+body .neon {
+  font-family: "Dancing Script", cursive;
+}
+
+body .neon h1 {
+  font-weight: normal;
+  font-size: 5em;
+  text-align: center;
+  width: 100%;
+  color: #BDA066;
+  animation: flicker 5s infinite linear;
+  text-shadow: 0 0 10px #BDA066;
+}
+
+body .neon h2 {
+  font-weight: normal;
+  font-size: 5em;
+  text-align: center;
+  width: 100%;
+  color: #FFF;
+  animation: flicker 5s infinite linear;
+  text-shadow: 0 0 10px #FFF;
+}
+
+body .neon h1 span {
+  animation: flicker 2s infinite linear;
+}
+
+body .marquee {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background: #C9AE77;
+  color: #FEFEFE;
+  border: 1px solid #FEFEFE;
+}
+
+body .marquee h1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  transform: translateX(100%);
+  animation: marquee 10s linear infinite;
+}
+
+body .slide-container {
+  border: 5px solid #C9AE77;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+body .slide-container img {
+  width: 400px;
+  height: 250px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  animation: slide-up 10s linear infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 0.5;
+  }
+  2% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  16% {
+    opacity: 0;
+  }
+  17% {
+    opacity: 1;
+  }
+  21% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 0.5;
+  }
+  23% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 1;
+  }
+  77% {
+    opacity: 0.5;
+  }
+  78% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0.5;
+  }
+  98% {
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-250px);
+  }
+  60% {
+    transform: translateY(-250px);
+  }
+  70% {
+    transform: translateY(-500px);
+  }
+  90% {
+    transform: translateY(-500px);
+  }
+}
